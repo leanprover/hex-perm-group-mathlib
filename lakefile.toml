@@ -1,10 +1,15 @@
 name = "hex-perm-group-mathlib"
 defaultTargets = ["HexPermGroupMathlib"]
 
+leanOptions = [
+  { name = "doc.verso", value = true },
+  { name = "doc.verso.suggestions", value = false },
+]
+
 [[require]]
 name = "HexPermGroup"
 git = "https://github.com/leanprover/hex-perm-group.git"
-rev = "main"
+rev = "v0.6.0"
 
 [[require]]
 name = "mathlib"
@@ -13,3 +18,7 @@ rev = "v4.34.0-rc2"
 
 [[lean_lib]]
 name = "HexPermGroupMathlib"
+
+[[lean_lib]]
+name = "HexPermGroupMathlibTests"
+globs = ["HexPermGroupMathlib.Tests"]
